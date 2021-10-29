@@ -1,4 +1,4 @@
-package com.example.moviedb.view;
+package com.example.moviedb.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,13 +10,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.moviedb.R;
+//import com.example.moviedb.adapter.MovieDetailGenreRVAdapter;
 import com.example.moviedb.adapter.MovieDetailGenreRVAdapter;
 import com.example.moviedb.helper.Const;
 import com.example.moviedb.model.Genre;

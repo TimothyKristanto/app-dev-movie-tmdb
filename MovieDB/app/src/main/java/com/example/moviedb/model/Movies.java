@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 import com.google.gson.Gson;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class Movies implements Parcelable {
@@ -374,6 +375,8 @@ public class Movies implements Parcelable {
         public void setOrigin_country(String origin_country) {
             this.origin_country = origin_country;
         }
+
+
     }
 
     public static class ProductionCountries {
@@ -427,4 +430,24 @@ public class Movies implements Parcelable {
             this.name = name;
         }
     }
+
+//    public HashMap<Integer, ProductionCompanies> getProductionCompaniesHashMap(){
+//        HashMap<Integer, ProductionCompanies> map = new HashMap<>();
+//
+//        for(ProductionCompanies productionCompanies : production_companies){
+//            map.put(productionCompanies.getId(), productionCompanies);
+//        }
+//
+//        return map;
+//    }
+//
+//    public HashMap<Integer, String> getGenresHashMap(){
+//        HashMap<Integer, String> map = new HashMap<>();
+//
+//        for(Genres singleGenre : genres){
+//            map.put(singleGenre.getId(), singleGenre.getName());
+//        }
+//
+//        return map;
+//    }
 }

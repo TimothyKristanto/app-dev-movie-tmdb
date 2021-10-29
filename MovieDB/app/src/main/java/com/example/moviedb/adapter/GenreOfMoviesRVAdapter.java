@@ -16,7 +16,8 @@ import com.bumptech.glide.Glide;
 import com.example.moviedb.R;
 import com.example.moviedb.helper.Const;
 import com.example.moviedb.model.NowPlaying;
-import com.example.moviedb.view.MovieDetailActivity;
+import com.example.moviedb.view.activities.MovieDetailActivity;
+import com.example.moviedb.view.fragments.MovieDetailsFragment;
 
 import java.util.ArrayList;
 
@@ -49,7 +50,7 @@ public class GenreOfMoviesRVAdapter extends RecyclerView.Adapter<GenreOfMoviesRV
         holder.cvNowPlayingViewholder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, MovieDetailActivity.class);
+                Intent intent = new Intent(context, MovieDetailsFragment.class);
                 intent.putExtra("movie", genreResult);
                 context.startActivity(intent);
             }

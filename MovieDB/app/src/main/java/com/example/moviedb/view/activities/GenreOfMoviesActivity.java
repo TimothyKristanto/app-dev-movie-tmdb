@@ -1,4 +1,4 @@
-package com.example.moviedb.view;
+package com.example.moviedb.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,9 +16,6 @@ import com.example.moviedb.model.NowPlaying;
 import com.example.moviedb.viewmodel.MoviesViewModel;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import javax.xml.transform.Result;
 
 public class GenreOfMoviesActivity extends AppCompatActivity {
     private int genreId;
@@ -28,6 +25,7 @@ public class GenreOfMoviesActivity extends AppCompatActivity {
     private MoviesViewModel moviesViewModel;
     private ArrayList<NowPlaying.Results> listGenreResults;
     private GenreOfMoviesRVAdapter adapter;
+    private int page = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +52,7 @@ public class GenreOfMoviesActivity extends AppCompatActivity {
     }
 
     private void initViewModel() {
-        moviesViewModel.getNowPlaying();
+        moviesViewModel.getNowPlaying(page);
         moviesViewModel.getNowPlayingResult().observe(GenreOfMoviesActivity.this, showGetNowPlayingResult);
     }
 

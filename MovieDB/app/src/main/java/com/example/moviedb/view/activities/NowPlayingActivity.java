@@ -1,4 +1,4 @@
-package com.example.moviedb.view;
+package com.example.moviedb.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -19,6 +19,7 @@ public class NowPlayingActivity extends AppCompatActivity {
     private MoviesViewModel moviesViewModel;
     private NowPlayingRVAdapter adapter;
     private ArrayList<NowPlaying> listNowPlaying;
+    private int page = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class NowPlayingActivity extends AppCompatActivity {
     }
 
     private void initViewModel(){
-        moviesViewModel.getNowPlaying();
+        moviesViewModel.getNowPlaying(page);
         moviesViewModel.getNowPlayingResult().observe(NowPlayingActivity.this, showNowPlayingResult);
     }
 
