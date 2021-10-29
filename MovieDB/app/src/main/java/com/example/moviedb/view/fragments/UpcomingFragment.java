@@ -113,7 +113,7 @@ public class UpcomingFragment extends Fragment {
 
                 isLoading = false;
             }
-        }, 500);
+        }, 1000);
 
     }
 
